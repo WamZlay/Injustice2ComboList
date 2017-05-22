@@ -5,10 +5,10 @@
 
 \section{Notation}
 \begin{lstlisting}[language=FG]
-@SC = Stampede Cancel = bf3 ff/bb
-@L(C) = Leap(Close) = df1b
-L = Leap = df1
-L(F) = Leap(Far) = df1f@
+@SC = Stampede Cancel = bf3 ff/bb@
+@L(C) = Leap(Close) = df1b@
+@L = Leap = df1@
+@L(F) = Leap(Far) = df1f@
 @MC = Mind Control = db2@
 @PB = Psyonic Blast = bf2@
 \end{lstlisting}
@@ -24,7 +24,9 @@ b1 1+3
 
 \section{Starters}
 \begin{lstlisting}[language=FG]
-
+22 1+3 MB
+b1 1+3 MB
+b2
 
 \end{lstlisting}
 
@@ -37,9 +39,9 @@ Other Enders :
 
 22 1+3
 
-Trait
+Trait :
 b2 1+3f
-f21 @MC@
+f21 @db2@
 \end{lstlisting}
 
 \section{Meterless}
@@ -53,10 +55,10 @@ D2 B2 xx @df1b 2@ 221+3 = 22
 \subsection{Trait}
 
 \begin{lstlisting}[language=FG]
-T dd1 1 22 1+3 = 19
-T dd1 1 f21 MC = ?
-T dd1 1 b3 J3 @df1b 2@ ender = ?
-T F21 xx @SC@ D2 B2xx@df1b 2@ 221+3 = 32
+4 dd1 1 22 1+3 = 19
+4 dd1 1 f21 @db2@ = ?
+4 dd1 1 b3 J3 @df1b 2@ ender = ?
+4 f21 xx @SC@ D2 B2xx@df1b 2@ 221+3 = 32
 \end{lstlisting}
 
 
@@ -76,7 +78,7 @@ B2 xx WB B3 J3 B2 xx @df1b 2@ 221+3 = 47
 
 \subsection{Trait}
 \begin{lstlisting}[language=FG]
-b1 1+3 MB b3 ff d2 xx T b2 xx @df1b 2@ 3 @PB@ = 38
+b1 1+3 MB b3 ff d2 xx T b2 xx @df1b 2@ 3 @bf2@ = 38
 b1 1+3 MB b3 ff d2 xx T b2 xx @df1b 2@ f21 = 36 
 \end{lstlisting}
 
