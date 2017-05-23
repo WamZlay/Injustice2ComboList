@@ -1,0 +1,64 @@
+\documentclass[main.tex MB]{subfiles}
+\begin{document}
+
+\chapter{Swamp Thing}
+
+\section{Notation}
+\begin{lstlisting}[language=FG]
+\end{lstlisting}
+
+
+\section{Basic Strings}
+
+\begin{lstlisting}[language=FG]
+\end{lstlisting}
+
+\section{Starters}
+\begin{lstlisting}[language=FG]
+b223
+f233
+b12
+f23
+d1
+\end{lstlisting}
+
+\section{Enders}
+
+\begin{lstlisting}[language=FG]
+@df2@ 3
+@db3 113
+\end{lstlisting}
+
+\section{Meterless}
+
+
+\begin{lstlisting}[language=FG]
+B223, F23 xx  @BF3@
+B223, F23 xx @ender@
+J3, 11 xx DF1B
+F233, F23 xx DB3, 11 xx DF1B
+
+B223, F23xxDF2, 3 [C]
+F233, B22xxDF2, 3 [C]
+F233, B12xxDF2, 3 [C]
+\end{lstlisting}
+
+\section{Metered}
+
+
+\begin{lstlisting}[language=FG]
+B232 MB BF3, F23 xx ender
+B1(2) MB BF3, F23xxDF2, 3
+B12(or D3)xx MB BF3, F23 xx DB3, 11 xx DF1B
+F23 MB BF3, B232 xx DF2, 3
+D1xx DB2 MB ,F23 xx DF1B
+B223 xx BF3 MB, D2 xx DF2, 3
+
+B223, F23 xx MB BF3, 11xxDF2, 3 [1,C]
+B232 xx MB BF3, F23xxDB3, 113 [1,C]
+B1(2) xx MB BF3, F23xxDB3, 113 [1,C]
+F23 xx MB BF3, F23xxDB3, 113 [1,C]
+B223 xx MB DB2, Jump 2, 11xxDF2, 3 [1,C]
+\end{lstlisting}
+
+\end{document}
