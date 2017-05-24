@@ -3,14 +3,53 @@
 
 \chapter{Batman}
 
+\section{Notation}
+\begin{lstlisting}[language=FG]
+ATA = Air To Air
+AA = Anti Air
+GR = Grapple Reset
+\end{lstlisting}
+
+
+\section{Basic Strings}
+
+\begin{lstlisting}[language=FG]
+\end{lstlisting}
+
+\section{Starters}
+\begin{lstlisting}[language=FG]
+
+\end{lstlisting}
+
+\section{Enders}
+
+\begin{lstlisting}[language=FG]
+\end{lstlisting}
+
 \section{Meterless}
 
 \begin{lstlisting}[language=FG]
+123, J2, 123, B23
+123, J2, 123, F23
+B113, F23
+B113, B23
+223, J2, 123, B23
+223, J2, 123, F23
+223, B3, J3, B23
+223, B3, J2, 123, B23
+D2, B23 (AA)
+D2, F23 (AA)
+J2, f, 123, B23 (ATA)
+J2, f, 123, F23 (ATA)
+F3, J3, B23
+B3, J2, J2, B23
+B3, J3, F23
 \end{lstlisting}
 
 \subsection{Trait}
 
 \begin{lstlisting}[language=FG]
+
 \end{lstlisting}
 
 
@@ -19,63 +58,87 @@
 
 \end{lstlisting}
 
-\section{1 Meter}
+\section{Metered}
 
 
 \begin{lstlisting}[language=FG]
+
+112, DF1 MB, NJ2, 223, J2, 123, B23 [1,M]
+112, DF1 MB, NJ2, 223, B3, J3, F23 [1,M]
+112, DF1 MB, NJ2, 223, B3, J2, B23 [1,M]
+112, DB2 MB, B3, J3, F23 [1,M]
+112, DB2 MB, B3, J2, B23 [1,M]
+112, DB2 MB, J3, J2, D2, DF1 [1,M]
+
+123, J2, B2, DB1 MB, (slight walk forward) B3, J3, F23 [1,M]
+123, J2, B2, DB1 MB, (slight walk forward) B3, J2, B23 [1,M]
+
+B11, DF1 MB, NJ2, 223, B3, J2, B23 [1,M]
+B11, DF1 MB, NJ2, 223, B3, J3, F23 [1,M]
+B11, DB2 MB, B3, J3, B23 [1,M]
+B11, DB2 MB, B3, J3, F23 [1,M]
+
+223, J2, B2, DB1 MB, (slight walk forward) B3, J2, F23 [1,M]
+223, J2, B2, DB1 MB, (slight walk forward) B3, J2, B23 [1,M]
+223, B3, J3, J2, D2, DF1 MB, NJ2, B23 [1,M]
+223, B3, J3, J2, D2, DF1 MB (GR) [1,M]
+
+D2, B2, DF1 MB, B3, J3, F23 (AA) [1,M]
+D2, B2, DF1 MB, B3 J3, B23( AA) [1,M]
+
+J2, B2, DF1 MB, B3, J2, 123, B23 (ATA) [1,M]
+J2, B2, DF1 MB, B3, J3, F23 (ATA) [1,M]
+J2, B2, DF1 MB (GR) [1,M]
+J2, B2, DB1 MB, B3, J3, F23 (ATA, height dependant) [1,M]
+
+F3, J2, B2, DB1 MB, J2, B23 [1,M]
+F3, J2, B2, DB1 MB, J2, F23 [1,M]
+F3, J2, B2, DF1 MB, NJ2, B23 [1,M]
+F3, J2, B2, DF1 MB (GR) [1,M]
+MB F3, J3, B23 [1,M]
+
+B3, J2, J2, B2, DF1 MB, NJ2, B23 [1,M]
+B3, J2, J2, B2, DF1 MB (GR) [1,M]
+B3, J3, J2, D2, DF1 MB (GR) [1,M]
+MB B3, J3, F23 [1,M]
+MB B3, J2, J2, B23 [1,M]
+
+DB2 MB, J2, 123, B23 (AA) [1,M]
+DB2 MB, J3, F23 [1,M]
+
+
+112, DB2 MB, B3, Ji2, B2, DF1 MB, Nj2, B23 [2,M]
+112, DB2 MB, B3, Ji3, Ji2, D2, DF1 MB (Grapple reset) [2,M]
+
+123, Ji2, B2, DB1 MB, (slight walk forward) B3, Ji2, B2, DF1 MB, Nj2, B23 [2,M]
+123, Ji2, B2, DB1 MB, (slight walk forward) B3, Ji3, D2, DF1 MB (Grapple reset) [2,M]
+
+B11, DB2 MB, B3, Ji2, B2, DF1 MB, Nj2, B23 [2,M]
+B11, DB2 MB, B3, Ji3, Ji2, D2, DF1 MB (Grapple reset) [2,M]
+
+223, Ji2, B2, DB1 MB, (slight walk forward) B3, Ji2, B2, DF1 MB, Nj2, B23 [2,M]
+223, Ji2, B2, DB1 MB, (slight walk forward) B3, Ji2, B2, DF1 MB (Grapple reset) [2,M]
+
+D2, B2, DF1 MB, B3, Ji2, B2, DB1 MB, Ji2, Air DB2 (anti-air) [2,M]
+D2, B2, DF1 MB, F3, Ji2, B2, DB1 MB, Ji2, Air DB2 (anti-air) [2,M]
+
+Ji2, B2, DB1 MB, B3, Ji2, B2, DF1 MB, Nj2, Ji2, B23 (air-to-air, height dependant) [2,M]
+Ji2, B2, DB1 MB, B3, Ji2, B2, DF1 MB (air-to-air, height dependant, Grapple reset) [2,M]
+
+F3, Ji2, B2, DB1 MB, Ji2, B2, DF1 MB, Nj2, B23 [2,M]
+F3, Ji2, B2, DB1 MB, Ji2, B2, DF1 MB (Grapple reset) [2,M]
+MB F3, Ji2, B2, DB1 MB, Ji2, B23 [2,M]
+MB F3, Ji2, B2, DF1 MB, Nj2, B23 [2,M]
+MB F3, Ji2, B2, DF1 MB (Grapple reset) [2,M]
+
+B3, Ji2, B2, DB1 MB, Ji2, B2, DF1 MB, Nj2, B23 [2,M]
+B3, Ji2, B2, DB1 MB, Ji2, B2, DF1 MB (Grapple reset) [2,M]
+MB B3, Ji2, Ji2, B2, DF1 MB, Nj2, B23 [2,M]
+MB B3, Ji3, Jj2, D2, DF1 MB (Grapple reset) v
+MB B3, Ji2, B2, DB2 MB, Ji3, B23 [2,M]
 \end{lstlisting}
 
 \subsection{Trait}
-
-\begin{lstlisting}[language=FG]
-\end{lstlisting}
-
-
-\subsection{Interactible}
-\begin{lstlisting}[language=FG]
-
-\end{lstlisting}
-
-\section{2 Meter}
-
-
-\begin{lstlisting}[language=FG]
-\end{lstlisting}
-
-\subsection{Trait}
-
-\begin{lstlisting}[language=FG]
-\end{lstlisting}
-
-
-\subsection{Interactible}
-\begin{lstlisting}[language=FG]
-
-\end{lstlisting}
-
-\section{3 Meter}
-
-
-\begin{lstlisting}[language=FG]
-\end{lstlisting}
-
-\subsection{Trait}
-
-\begin{lstlisting}[language=FG]
-\end{lstlisting}
-
-
-\subsection{Interactible}
-\begin{lstlisting}[language=FG]
-
-\end{lstlisting}
-\section{4 Meter}
-
-\begin{lstlisting}[language=FG]
-\end{lstlisting}
-
-\subsection{Trait}
-
 \begin{lstlisting}[language=FG]
 \end{lstlisting}
 
@@ -86,5 +149,8 @@
 \end{lstlisting}
 
 \section{X-Ray}
+\begin{lstlisting}[language=FG]
+
+\end{lstlisting}
 
 \end{document}
