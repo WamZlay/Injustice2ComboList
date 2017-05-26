@@ -1,0 +1,67 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+
+\chapter{Cheetah}
+
+\section{Notation}
+\begin{lstlisting}[language=FG]
+\end{lstlisting}
+
+
+\section{Basic Strings}
+
+\begin{lstlisting}[language=FG]
+\end{lstlisting}
+
+\section{Starters}
+\begin{lstlisting}[language=FG]
+
+\end{lstlisting}
+
+\section{Enders}
+
+\begin{lstlisting}[language=FG]
+\end{lstlisting}
+
+\section{Meterless}
+
+
+\begin{lstlisting}[language=FG]
+[STARTER] xx @db2@ D2, 112 xx @dbf1@
+[STARTER] xx @db2@ F3, J3, 112 xx @dbf1@ | @db2@
+[STARTER] xx @db2@ F3, D2xx4, 112 xx @db2@
+
+[STARTER] xx @db2@, D1 xx DBF1 | @db1 |  @@db2@@
+[STARTER] xx @db2@, F3, J3, 1, 112 xx @dbf1@ | @db2@
+
+112 xx @DB2@ = 199
+D2, 112 xx @DBF1@ = 198
+F3, J3, 112 xx @DBF1@ = 362
+B3, J3, 112 xx @DBF1@ = 357
+
+F3, D2xx4, 11, 112 xx @dbf1@  | @db2@
+\end{lstlisting}
+
+\section{Metered}
+
+
+\begin{lstlisting}[language=FG]
+[STARTER] xx @dB2@ MB D2, 112 xx @dbf1@ MB, B3, ff, 112 xx @dbf1@ |  @db2@
+[STARTER] xx @dB2@ MB F3, J3, 112 xx @dbf1@ MB, ff, 112 xx @dbf1@  | |  @db2@
+[STARTER] xx @dB2@ MB F3, D2xx4, 112 xx @dbf1@ MB, ff, 112xx @db2@
+MB Command Grab, B3, J3, 112 xx @dbf1@  |  @db2@
+MB Divekick, J2, 112 xx @dbf1@  |  @db2@
+112 xx @db2@ MB = 249
+D2, 112 xx @dbf1@ MB, J3 xx @db2@ = 313
+
+@ADB2@ MB J1 112xxDBF1
+@ADB2@ MB @db1@ MB b3 J3 xx @dbf1@
+@ADB2@ MB 3 xx @dbf1@ MB b3 J3 xx @dbf1@
+\end{lstlisting}
+
+\section{X-Ray}
+\begin{lstlisting}[language=FG]
+
+\end{lstlisting}
+
+\end{document}
